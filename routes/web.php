@@ -27,6 +27,11 @@ Route::middleware(['auth','verified'])
         Route::resource('posts', PostController::class);
     });
 
+    //si mette alla fine per gestire tutte le route che non appartengono a laravel
+    Route::get('{any?}',function(){
+        return view('guest.home');
+    })->where('any', '.*')->name('home');
+
 
 
 require __DIR__.'/auth.php';
