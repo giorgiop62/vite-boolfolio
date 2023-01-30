@@ -1,4 +1,6 @@
+
 <script>
+import axios from 'axios';
 export default {
   name: "App",
   data() {
@@ -27,7 +29,7 @@ export default {
     <h1>Elenco post</h1>
     <div  v-for="post in posts" :key="post.id" class="post-box">
       <h3>{{ post.title }}</h3>
-      <p>{{ post.text }}}</p>
+      <p> v-html="{{ post.text }}"</p>
     </div>
   </div>
 </template>
