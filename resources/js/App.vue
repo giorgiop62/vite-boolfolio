@@ -1,38 +1,28 @@
 
 <script>
-import axios from 'axios';
+import Header from './partials/Header.vue';
 export default {
   name: "App",
-  data() {
-    return {
-      baseUrl: "http://127.0.0.1:8000/api/",
-      posts: []
-    }
-  },
-  methods: {
-    getApi() {
-      axios.get(this.baseUrl + "posts")
-      .then(result=>{
-        this.posts = result.data.posts;
-        console.log(this.posts);
-      })
-    }
-  },
-  mounted() {
-    this.getApi();
-  },
-};
+  components:{
+    Header
+  }
+}
+
 </script>
 
 <template>
-  <div class="container">
-    <h1>Elenco post</h1>
-    <div  v-for="post in posts" :key="post.id" class="post-box">
-      <h3>{{ post.title }}</h3>
-      <p> v-html="{{ post.text }}"</p>
-    </div>
-  </div>
+
+  <Header />
+
+  <main class="container">
+
+    <router-view></router-view>
+
+  </main>
+
+
 </template>
 
-<style>
+<style lang="scss">
+
 </style>
