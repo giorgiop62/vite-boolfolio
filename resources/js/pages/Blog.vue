@@ -4,7 +4,7 @@ export default {
   name: "Blog",
   data() {
     return {
-      baseUrl: "http://127.0.0.1:8000/api",
+      baseUrl: "http://127.0.0.1:8000/api/",
       posts: [],
     };
   },
@@ -12,6 +12,7 @@ export default {
     getApi() {
       axsios.get(this.baseUrl + "posts").then((result) => {
         this.posts = result.data.posts;
+        console.log(result.data);
       });
     },
   },

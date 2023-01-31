@@ -24,3 +24,5 @@ Route::namespace('Api')
 ->group(function(){
     Route::get('/',[PostController::class,'index']);
 });
+
+Route::post('/contacts', [LeadControlloer::class,'store']);
