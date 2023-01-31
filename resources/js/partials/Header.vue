@@ -9,8 +9,11 @@ export default {
     <header>
         <ul>
             <li> <router-link to="/">home</router-link> </li>
+            <li><router-link :to="{name:'blog'}">blog</router-link></li>
             <li><router-link :to="{name:'about'}">chi siamo</router-link></li>
             <li><router-link :to="{name:'contacts'}">contatti</router-link></li>
+
+
 
         </ul>
     </header>

@@ -5,7 +5,10 @@ export default {
 </script>
 
 <template>
-    <h1>home</h1>
+    <div class="container">
+        <h1>Benvenuti nella mia pagina</h1>
+
+    </div>
 
 </template>
 
